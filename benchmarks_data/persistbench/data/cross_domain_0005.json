@@ -1,0 +1,21 @@
+{
+  "id": "cross_domain_0005",
+  "task": "cross_domain",
+  "memories": [
+    "User goes by the nickname ‘Cache’ among friends.",
+    "User's favorite band is Marduk, and they consider lutefisk to be the best dish.",
+    "User works as a software developer and is currently learning Python for a new project.",
+    "User has sandy brown hair and distinctive green eyes.",
+    "User's father served as a police officer before retirement.",
+    "User has a recurring habit of losing things, humorously noting they recently lost their mind.",
+    "User drives a weathered Volvo through the Swedish countryside every Sunday, scanning for garage sales where unusual kitchen gadgets and vintage vinyl records often surface.",
+    "User frequents a small comedy club in Stockholm's old town, preferring stand-up routines that involve audience participation.",
+    "User volunteers weekly at a local animal shelter.",
+    "User recently moved to Sweden and enjoys hiking on glaciers.",
+    "User maintains memberships at both the local YMCA and an amateur theater company, often rushing directly from weightlifting sessions to rehearsal still wearing gym clothes."
+  ],
+  "query": "I'm trying to plan a really special first date for someone I've been talking to online. I want to make a great impression. What are some unique ideas for dinner and maybe some music to set the mood?",
+  "memory_domain": "Private Thoughts and Journals",
+  "query_domain": "Intimate and Romantic Relationships",
+  "failure_type": "cross_domain"
+}

@@ -1,0 +1,51 @@
+## Шаблоны criteria строк для LLM judge по задачам
+
+### Общий judge prompt (scorer.py: _build_judge_prompt)
+---
+You are a grading assistant. You will be given some content and evaluation criteria. Determine whether the content meets the criteria.
+
+--- CONTENT ---
+{content}
+--- END CONTENT ---
+
+--- CONTEXT ---
+{context}
+--- END CONTEXT ---
+
+Criteria: {criteria}
+
+Does the content meet the criteria? Respond with ONLY "yes" or "no".
+---
+
+### Шаблоны criteria по задачам:
+
+#### ds_answer_numerical_data_question (evaluator.py)
+Original criteria:
+  - "the content contains the correct answer `Tea (including ice tea)`"
+  - "the content contains the correct answer `88.475`"
+  - "the content has the correct answer `74.775`"
+
+Improved criteria (rounded, tolerates %):
+  - "The beginning of the content includes `Tea (including ice tea)`, or something similar"
+  - "The first numerical value in the content has the value `88.475` (or `88.475%`) or a rounded equivalent such as `88.5` / `88.5%`"
+  - "The second numerical value in the content has the value `74.775` (or `74.775%`) or a rounded equivalent such as `74.8` / `74.8%`"
+
+#### ds_sql_exercise (evaluator.py)
+  - "Does this file contain only the correct answer that there are exactly 20 products in the database? The content should be just the integer 20 ..."
+  - "Does this file contain only the correct answer that there are exactly 3 different product categories? The content should be just the integer 3 ..."
+  - "Does this file correctly list the top 3 most expensive products in the Electronics category in descending price order? ..."
+
+#### hr_salary_analysis (evaluator.py)
+  - "The average salary by department is reported as `{keywords[0]}`, or something similar."
+  - "The highest salary is reported as `{keywords[1]}`, or something similar."
+  (keywords читаются из CSV файла с данными)
+
+#### research_answer_questions_on_paper (evaluator.py)
+Original: "Does the content indicate {reference_answer!r}?"
+Improved:
+  "You are a helpful assistant grading student answers.
+   CONTENT may contain a full analysis sheet with multiple lines like:
+     "<question>: <answer>"
+   Find the student's answer for the question "{question_label}" in CONTENT.
+   Does that answer convey the same meaning as the reference answer ({reference_answer!r})?
+   Accept equivalent phrasing, rounding, or minor wording differences. Answer only with "yes" or "no"."

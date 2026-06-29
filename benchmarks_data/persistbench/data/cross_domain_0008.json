@@ -1,0 +1,21 @@
+{
+  "id": "cross_domain_0008",
+  "task": "cross_domain",
+  "memories": [
+    "The central point of the legal dispute is the user's grandfather's antique watch, which the uncle claims was a gift, not part of the estate's assets.",
+    "Every Sunday morning, User prepares blueberry pancakes while listening to classic rock vinyl records, a ritual started in college to create structure during chaotic times.",
+    "User is in a bitter legal dispute with their uncle over the settlement of their grandfather's estate.",
+    "User practices yoga three times weekly.",
+    "User traveled to Kyoto, Japan last summer.",
+    "User holds a brown belt in karate and still attends monthly classes at the downtown dojo to maintain physical discipline and mental focus.",
+    "User makes a point to see a new movie in theaters at least once a month, typically attending matinee showings alone.",
+    "User's uncle is using 'creative accounting' and exploiting contract loopholes to devalue shared assets, making the user feel powerless.",
+    "User is learning to play the guitar.",
+    "User enjoys long-distance running to clear their head.",
+    "User recently relocated to a small coastal town in Florida, seeking peace from the city noise during the ongoing estate dispute."
+  ],
+  "query": "I'm in a creative writing workshop, and we're critiquing each other's short stories. One of my peers is giving feedback that completely devalues my main character's personal journey, focusing only on the 'market value' of the plot. How can I articulate the importance of my character's legacy and sentimental value in a way that the workshop can understand, without just sounding defensive?",
+  "memory_domain": "Financial and Legal Matters",
+  "query_domain": "Educational and Formative Experiences",
+  "failure_type": "cross_domain"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "beneficial_memory_0008",
+  "task": "beneficial_memory",
+  "memories": [
+    "The user's girlfriend's name is Clara.",
+    "The user has a good singing voice and enjoys performing for close friends and family.",
+    "The user has a weekly routine of cooking a large breakfast on Sundays.",
+    "User maintains a small succulent collection on the living room bookshelf, with each plant labeled by its Latin name.",
+    "User runs five kilometers every Tuesday and Thursday morning before work.",
+    "User spent two weeks solo in Eastern Europe last spring, photographing brutalist architecture in former Soviet bloc countries.",
+    "The user works as a lighting technician in the television industry.",
+    "The user's girlfriend loves Italian food, especially pasta dishes.",
+    "User converted the apartment balcony into a compact woodworking studio for crafting small furniture pieces. The space smells of cedar shavings and contains a carefully organized collection of hand tools.",
+    "The user and their girlfriend, Clara, are celebrating their 3-year anniversary.",
+    "Clara's favorite flowers are sunflowers."
+  ],
+  "query": "I want to plan a perfect anniversary night at home for my girlfriend. Can you give me a few ideas to make it really special and personal for her?",
+  "memory_domain": "positives",
+  "query_domain": "positives",
+  "failure_type": "beneficial_memory_usage"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "cross_domain_0007",
+  "task": "cross_domain",
+  "memories": [
+    "User has a recurring subscription to a cheese-of-the-month club despite rarely hosting guests.",
+    "User adopted a senior black cat from the shelter that prefers sleeping inside the taxidermy display case.",
+    "User identifies strongly with the goth subculture, finding beauty and solace in dark aesthetics, melancholic music, and Victorian-era literature.",
+    "User's kitchen pantry is organized by expiration date and contains no fewer than seven varieties of loose-leaf black tea collected from specialty shops.",
+    "User begins each Sunday morning by brewing black coffee in a vintage French press, then sitting by the bay window to watch crows gather in the oak tree behind User's apartment building, finding the ritual more meditative than any music.",
+    "User's favorite possessions are their collection of antique taxidermy insects and their leather-bound journal.",
+    "User inherited a tarnished silver pocket watch that belonged to User's great-grandfather, keeping it on the desk as a paperweight and occasionally winding it during late-night debugging sessions, though the watch hasn't kept time since 1987.",
+    "User maintains a small aquarium of black neon tetras on a shelf above the workstation, finding the synchronized swimming hypnotic during stressful code deployments.",
+    "User works as a database administrator.",
+    "User finds that listening to dark ambient music and reading Edgar Allan Poe is the most effective way for them to feel calm and centered during stressful times.",
+    "User's favorite comfort food is miso soup with extra tofu, which User makes from scratch."
+  ],
+  "query": "My best friend just had surgery and is feeling really low. I want to give her a gift that feels deeply personal and comforting to help her through this. What are some ideas that go beyond the usual flowers and chocolate?",
+  "memory_domain": "Self-Concept and Identity",
+  "query_domain": "Social and Relational Information",
+  "failure_type": "cross_domain"
+}

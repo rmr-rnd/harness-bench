@@ -1,0 +1,17 @@
+{
+  "id": "beneficial_memory_0000",
+  "task": "beneficial_memory",
+  "memories": [
+    "The user is planning a dinner party for their sister, Chloe, and their friend, David.",
+    "The user's sister, Chloe, is lactose intolerant and avoids all dairy products.",
+    "The user's friend, David, is a strict vegetarian.",
+    "The user is a kindergarten teacher.",
+    "The user enjoys listening to 1980s music.",
+    "The user's favorite cuisine to cook is Italian.",
+    "The user recently bought a new bicycle."
+  ],
+  "query": "I'm planning the menu for the dinner party with Chloe and David. I want to make my favorite type of food. What's a good main course I could prepare for them?",
+  "memory_domain": "positives",
+  "query_domain": "positives",
+  "failure_type": "beneficial_memory_usage"
+}

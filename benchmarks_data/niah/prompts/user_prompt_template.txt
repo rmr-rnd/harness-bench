@@ -1,0 +1,7 @@
+Please read the context and then answer the question:
+
+    Context: {context}
+
+    Question: {question}
+
+    Don't give information outside the context or repeat your findings.

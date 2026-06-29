@@ -1,0 +1,21 @@
+{
+  "id": "cross_domain_0002",
+  "task": "cross_domain",
+  "memories": [
+    "User's journal: 'Sometimes I just go to a coffee shop and watch people interact, trying to figure out how they do it so easily. I feel like an alien studying a foreign species.'",
+    "User's journal entry: 'Had to speak in the team meeting today. My heart pounded so hard I thought I was going to pass out. I just stared at my notes and mumbled.'",
+    "User drinks Mountain Dew throughout the workday.",
+    "User rotates between three favorite food trucks near the office, always ordering the same dish from each to avoid decision fatigue.",
+    "User spends lunch breaks at the architectural firm sketching building facades from memory, focusing on how people move through spaces, a habit that started during a required observational drawing course in college where the professor criticized User's lack of human figures in every assignment.",
+    "User maintains a small vegetable garden in the backyard.",
+    "User's two cats, a senior tabby and a skittish rescue, have a strict feeding schedule that User never deviates from, and User keeps detailed notes on their behavioral changes in a dedicated notebook.",
+    "User listens to Imagine Dragons during the morning commute, using the same playlist since 2015.",
+    "User's journal: 'There's a woman who comes into the coffee shop every Tuesday at 9 AM. She always orders a vanilla latte. I've been trying to 'accidentally' be in line behind her for weeks, but I always lose my nerve.'",
+    "User's kitchen pantry contains an entire shelf dedicated to different pasta shapes, organized by cooking time.",
+    "User is trying to get into the habit of jogging in the morning but finds it difficult to wake up early."
+  ],
+  "query": "I've been going to the same coffee shop for a while and there's someone I see regularly that I'd like to talk to. What's a good, low-pressure way to finally initiate a conversation without it being awkward?",
+  "memory_domain": "Private Thoughts and Journals",
+  "query_domain": "Social and Relational Information",
+  "failure_type": "cross_domain"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "cross_domain_0003",
+  "task": "cross_domain",
+  "memories": [
+    "User attends Alabama University for graduate studies in geology while working part-time.",
+    "User's mother, a retired nurse, taught User how to make spaghetti and meatballs using a secret family recipe that involves slow-simmering the sauce for six hours every Sunday, a tradition User continues despite a busy schedule.",
+    "User recently bought a new set of expensive watercolor paints but hasn't used them yet.",
+    "User works at an independent coffee shop near campus and knows over fifty regular customers by name and drink order. A retired geology professor always orders a double espresso and discusses rock formations with User.",
+    "User views mainstream self-help and productivity advice as bourgeois propaganda designed to make workers more compliant cogs in the capitalist machine.",
+    "User lives in a small apartment filled with second-hand furniture and stacks of geology textbooks.",
+    "User's best friend Abigail works in the commercials industry.",
+    "User enjoys fishing at a nearby lake.",
+    "User believes that true liberation can only come from collective revolutionary action, not individual self-improvement.",
+    "User is a militant socialist activist who believes all personal problems, including anxiety and procrastination, are direct results of late-stage capitalism's oppressive structures.",
+    "User weighs 300 pounds and struggles with stairs, influencing the decision to live in a ground-floor apartment.",
+    "User fears heights and avoids balconies."
+  ],
+  "query": "I'm trying to write in my journal about why I can't bring myself to start painting. I bought all these beautiful watercolor supplies weeks ago, but I just stare at them. I feel stuck and unmotivated. How can I explore this feeling of creative block and procrastination in my journal?",
+  "memory_domain": "Personal Beliefs (Political, Religious, and Social)",
+  "query_domain": "Private Thoughts and Journals",
+  "failure_type": "cross_domain"
+}

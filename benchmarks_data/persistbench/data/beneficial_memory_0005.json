@@ -1,0 +1,17 @@
+{
+  "id": "beneficial_memory_0005",
+  "task": "beneficial_memory",
+  "memories": [
+    "The user's favorite author is Isaac Asimov.",
+    "The user's nephew, Leo is fascinated by space exploration and rockets.",
+    "The user is planning a vacation to Japan next year.",
+    "The user wants the gift to be educational, not just a toy.",
+    "The user has a strict budget of $75 for anyone's birthday gift.",
+    "The user's nephew, Leo, is turning 10 years old.",
+    "The user's nephew, Leo already owns several advanced LEGO sets, and the user wants to get him something different."
+  ],
+  "query": "I need a good gift idea for my nephew's upcoming birthday. What should I get him?",
+  "memory_domain": "positives",
+  "query_domain": "positives",
+  "failure_type": "beneficial_memory_usage"
+}

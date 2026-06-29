@@ -1,0 +1,21 @@
+{
+  "id": "beneficial_memory_0004",
+  "task": "beneficial_memory",
+  "memories": [
+    "The user's main project is to optimize the supply chain for Innovate Pharma's clinical trials.",
+    "User's boxer mix, Bart, joins weekend hikes and receives a special sweet potato treat after every trail, which User bakes in batches every Thursday evening.",
+    "User visits the local farmers market every Saturday morning, chatting with vendors while selecting fresh ingredients for elaborate Sunday dinners that often feature spicy recipes collected during travels.",
+    "Innovate Pharma is a pharmaceutical company that specializes in oncology drugs.",
+    "User keeps a prized Bowie knife displayed in the home office, a gift from their father.",
+    "User recently purchased a Chevy Tahoe for family road trips to Georgia's mountain trails.",
+    "The user is fluent in French.",
+    "The user enjoys hiking on weekends.",
+    "The user is a management consultant.",
+    "The user's current primary client is a company called 'Innovate Pharma'.",
+    "User's favorite color is purple, reflected in home decor."
+  ],
+  "query": "I need to research the latest trends in regulatory compliance for my current project. Can you give me some key areas to focus on?",
+  "memory_domain": "positives",
+  "query_domain": "positives",
+  "failure_type": "beneficial_memory_usage"
+}

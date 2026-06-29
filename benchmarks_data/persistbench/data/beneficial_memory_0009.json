@@ -1,0 +1,23 @@
+{
+  "id": "beneficial_memory_0009",
+  "task": "beneficial_memory",
+  "memories": [
+    "The user's sister, Sarah, has been estranged from the family for years after joining a high-control group called 'The Echelon'.",
+    "The user's father is a staunch anti-capitalist and is very outspoken against what he calls 'exploitative cults like The Echelon'.",
+    "User takes golden retriever Max to the neighborhood park every morning at 6:30 AM, walking a 2-mile loop around the pond and feeding ducks with whole grain bread from a local bakery.",
+    "User immigrated from Japan over a decade ago and teaches Japanese language at a community college.",
+    "User frequently talks in their sleep about work projects.",
+    "The user's favorite type of food is Thai.",
+    "The user owns a golden retriever named Max.",
+    "The user is planning their mother's 70th birthday party.",
+    "User volunteers at the city animal shelter every other Saturday.",
+    "The user's mother's single wish for her birthday is to see her estranged daughter, Sarah.",
+    "User enjoys reading Chinese historical fiction before bed.",
+    "The user's mother is highly sensitive to conflict and gets very stressed during family arguments.",
+    "User recently bought bright yellow running sneakers."
+  ],
+  "query": "I'm trying to plan my mom's 70th birthday party. Her main wish is for my sister Sarah to be there, but I'm worried about my dad. What's the best strategy to handle the invitation and the party itself to make sure my mom has a happy, stress-free day?",
+  "memory_domain": "positives",
+  "query_domain": "positives",
+  "failure_type": "beneficial_memory_usage"
+}

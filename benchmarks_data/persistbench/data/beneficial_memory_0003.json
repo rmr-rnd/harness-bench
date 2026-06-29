@@ -1,0 +1,19 @@
+{
+  "id": "beneficial_memory_0003",
+  "task": "beneficial_memory",
+  "memories": [
+    "The user's mother's name is Diane.",
+    "User practices ukulele every evening, focusing on folk songs rather than their childhood love of Sinatra standards.",
+    "The user's mother's favorite drink is unsweetened iced tea.",
+    "The user is currently learning to play the ukulele.",
+    "A cherished memory for the user is learning to bake their mother's famous apple pie recipe with her.",
+    "The user considers their mother, Diane, to be their best friend.",
+    "The user's mother loves gardening and is particularly proud of her rose bushes.",
+    "User backpacked through New Zealand last spring, hiking alpine trails by day and relaxing to electronic music in hostels by night.",
+    "The user is afraid of heights."
+  ],
+  "query": "My mom's birthday is coming up and I have to give a speech. Can you draft a short, heartfelt toast for me to give at her party?",
+  "memory_domain": "positives",
+  "query_domain": "positives",
+  "failure_type": "beneficial_memory_usage"
+}

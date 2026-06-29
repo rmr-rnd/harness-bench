@@ -1,0 +1,19 @@
+{
+  "id": "cross_domain_0004",
+  "task": "cross_domain",
+  "memories": [
+    "User has a severe allergy to peanuts.",
+    "User's home office doubles as a music room, where the ukulele shares wall space with three guitars and a vintage record player.",
+    "User despises raw carrots but will eat them roasted with honey.",
+    "User's two mothers call every Tuesday evening, often asking about Leo but never pressing for details.",
+    "User has a tradition of making homemade pizza every Friday night, carefully checking all toppings for peanut oil cross-contamination.",
+    "User is learning to play the ukulele.",
+    "User is still deeply hurt after their childhood best friend, Mark, betrayed their trust by revealing a deeply personal secret to a group of mutual friends, leading to the end of their friendship.",
+    "User recently joined a recreational soccer league to combat low energy and has found that the post-game pub gatherings are surprisingly enjoyable.",
+    "User's son, Leo, is starting kindergarten and is very shy."
+  ],
+  "query": "My son is starting kindergarten soon and he's very shy. I want to help him learn how to make friends and navigate social situations. What are some key lessons I should teach him?",
+  "memory_domain": "Social and Relational Information",
+  "query_domain": "Educational and Formative Experiences",
+  "failure_type": "cross_domain"
+}

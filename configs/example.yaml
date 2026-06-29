@@ -1,0 +1,59 @@
+model:
+  base_url: ${MODEL_BASE_URL:-https://api.openai.com/v1}
+  api_key: ${OPENAI_API_KEY}
+  model_name: gpt-4o
+  temperature: 0.0
+  max_tokens: 4096
+  reasoning_effort: null  # none / low / medium / high / xhigh; null = not set
+
+judge_model:
+  base_url: ${JUDGE_BASE_URL:-https://api.openai.com/v1}
+  api_key: ${JUDGE_API_KEY:-${OPENAI_API_KEY}}
+  model_name: gpt-4o-mini
+  temperature: 0.0
+  max_tokens: 4096
+
+harness:
+  type: hermes  # hermes | openclaw | opencode | pac1_hermes | pac1_openclaw | pac1_opencode
+  hermes_image: nousresearch/hermes-agent:latest
+  hermes_api_key: ''
+  hermes_approvals_off: true
+  opencode_image: ghcr.io/anomalyco/opencode:latest
+  openclaw_image: ghcr.io/openclaw/openclaw:latest
+  openclaw_approvals_off: true
+
+benchmarks:
+  - name: simpleqa
+    limit: null
+  - name: bfcl
+    limit: null
+  - name: bfcl_memory
+    limit: null
+  - name: humaneval_plus
+    limit: null
+  - name: persistbench
+    limit: null
+  - name: niah
+    limit: null
+  - name: swe_bench
+    limit: null
+  - name: swe_bench_multilingual
+    limit: null
+
+parallelism:
+  workers: 5
+  timeout_per_task: 180
+
+search:
+  tavily_api_key: ${TAVILY_API_KEY:-}
+
+docker:
+  network: bridge
+  cleanup_after: true
+
+database:
+  host: ${DB_HOST:-localhost}
+  port: 5432
+  name: harness_results
+  user: harness
+  password: ${DB_PASSWORD:-harness_dev}

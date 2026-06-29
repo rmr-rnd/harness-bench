@@ -1,0 +1,63 @@
+name: harness_bench
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: harness_results
+      POSTGRES_USER: harness
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-harness_dev}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../db/migrations:/docker-entrypoint-initdb.d:ro
+    networks:
+      - harness-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U harness -d harness_results"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  framework:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    # Code is bind-mounted (see volumes), so code changes need only a restart,
+    # not a rebuild. Declaring the command here (not just in the image CMD) means
+    # switching to `serve` also needs no rebuild.
+    command: framework serve
+    networks:
+      - harness-net
+    environment:
+      HARNESS_WORK_DIR: ${HARNESS_HOST_WORK_DIR}/harness-work
+      HARNESS_DOCKER_NETWORK: harness-net
+      HARNESS_MCP_HOST: framework
+      HARNESS_BENCHMARKS_DATA_DIR: ${HARNESS_HOST_WORK_DIR}/benchmarks_data
+      # Deployment database (env-override): the Web UI service binds to this DB
+      # regardless of the selected config preset. Must match the postgres service.
+      DB_HOST: postgres
+      DB_PORT: "5432"
+      DB_NAME: harness_results
+      DB_USER: harness
+      DB_PASSWORD: ${DB_PASSWORD:-harness_dev}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${HARNESS_HOST_WORK_DIR}/harness-work:${HARNESS_HOST_WORK_DIR}/harness-work
+      - ${HARNESS_HOST_WORK_DIR}/benchmarks_data:${HARNESS_HOST_WORK_DIR}/benchmarks_data:ro
+      - ../configs:/app/configs
+      - ../framework:/app/framework
+      - ../vendor:/app/vendor
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8765:8765"
+
+networks:
+  harness-net:
+    name: harness-net
+    driver: bridge
+
+volumes:
+  postgres_data:

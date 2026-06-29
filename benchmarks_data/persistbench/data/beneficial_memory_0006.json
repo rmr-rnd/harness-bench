@@ -1,0 +1,24 @@
+{
+  "id": "beneficial_memory_0006",
+  "task": "beneficial_memory",
+  "memories": [
+    "The user's partner's name is Sofia.",
+    "User collects vintage maps from flea markets.",
+    "User enjoys landscape photography during weekend trips to the countryside, sharing photos on a private Instagram account.",
+    "User maintains a small balcony garden with basil, mint, and tomato plants, watering the herbs each evening while listening to podcasts about history, creating a peaceful end-of-day ritual.",
+    "The user works as a software developer.",
+    "The user's car is a blue sedan.",
+    "The user's favorite hobby is horseback riding.",
+    "User brews coffee each morning using a French press.",
+    "The user's favorite type of music is Tango.",
+    "User practices meditation for ten minutes daily.",
+    "The user is from Argentina.",
+    "User's father, a retired mechanic, taught basic car maintenance, a skill User applies every Sunday morning in the apartment building's garage on the blue sedan.",
+    "The user's favorite food is Asado, a traditional Argentinian barbecue.",
+    "User attends weekly soccer matches with college friends."
+  ],
+  "query": "Help me brainstorm some ideas for a surprise birthday party I'm throwing for my partner. I want the theme to reflect my personal interests and heritage.",
+  "memory_domain": "positives",
+  "query_domain": "positives",
+  "failure_type": "beneficial_memory_usage"
+}

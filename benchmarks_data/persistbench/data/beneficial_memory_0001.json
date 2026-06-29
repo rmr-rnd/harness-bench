@@ -1,0 +1,18 @@
+{
+  "id": "beneficial_memory_0001",
+  "task": "beneficial_memory",
+  "memories": [
+    "The user is planning their 30th birthday party.",
+    "The user wants the party's theme to be based on their favorite artist's most iconic music video.",
+    "The user's favorite color is pink.",
+    "The user has specified that the 'most iconic music video' in their opinion is '...Baby One More Time'.",
+    "User listens to historical fiction audiobooks while commuting on the subway.",
+    "The user is a vegetarian.",
+    "The user works as a graphic designer.",
+    "The user's favorite musical artist is Britney Spears."
+  ],
+  "query": "Can you give me some ideas for decorations and activities for my party?",
+  "memory_domain": "positives",
+  "query_domain": "positives",
+  "failure_type": "beneficial_memory_usage"
+}

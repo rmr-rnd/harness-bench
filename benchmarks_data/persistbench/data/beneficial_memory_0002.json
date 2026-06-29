@@ -1,0 +1,19 @@
+{
+  "id": "beneficial_memory_0002",
+  "task": "beneficial_memory",
+  "memories": [
+    "User prefers watching movies at the small independent theater downtown rather than large multiplexes.",
+    "User runs three miles through the neighborhood park every morning, using the time to brainstorm ideas for creative projects.",
+    "The user's friend Michael is a vegetarian.",
+    "The user works as a journalist for a local newspaper.",
+    "The user owns a golden retriever named Buddy.",
+    "The user prefers simple recipes with fewer than 10 ingredients.",
+    "The user's friend Jessica has a severe gluten allergy.",
+    "The user wants to cook on their new outdoor grill.",
+    "The user is hosting a dinner party for their friends Michael and Jessica."
+  ],
+  "query": "I'm having Michael and Jessica over for a dinner party. What's a simple meal I can make for everyone on my new grill?",
+  "memory_domain": "positives",
+  "query_domain": "positives",
+  "failure_type": "beneficial_memory_usage"
+}

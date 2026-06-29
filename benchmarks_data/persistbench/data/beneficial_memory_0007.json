@@ -1,0 +1,21 @@
+{
+  "id": "beneficial_memory_0007",
+  "task": "beneficial_memory",
+  "memories": [
+    "The user's ultimate career goal is to become an animator at a major studio like DreamWorks.",
+    "User is in a long-term relationship with a partner who works as a registered nurse.",
+    "The user is a freelance graphic designer.",
+    "User follows NFL games every Sunday and participates in a fantasy football league.",
+    "The user is learning to speak Italian.",
+    "The user specializes in traditional, hand-drawn art styles.",
+    "User maintains a small indoor garden with over a dozen houseplants.",
+    "User prefers nachos over popcorn during movie nights.",
+    "User dreams of visiting Japan during cherry blossom season to experience the blend of tradition and modernity.",
+    "The user finds creative inspiration for their work in classical music, particularly from composers like Bach and Mozart.",
+    "The user has a golden retriever named Leo."
+  ],
+  "query": "Can you help me write a short, professional bio for my new portfolio website? I want it to capture who I am as an artist.",
+  "memory_domain": "positives",
+  "query_domain": "positives",
+  "failure_type": "beneficial_memory_usage"
+}
