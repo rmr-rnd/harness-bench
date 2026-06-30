@@ -14,13 +14,16 @@ judge_model:
   max_tokens: 4096
 
 harness:
-  type: hermes  # hermes | openclaw | opencode | pac1_hermes | pac1_openclaw | pac1_opencode
+  type: hermes  # hermes | openclaw | opencode | omp | pac1_hermes | pac1_openclaw | pac1_opencode | pac1_omp
   hermes_image: nousresearch/hermes-agent:latest
   hermes_api_key: ''
   hermes_approvals_off: true
   opencode_image: ghcr.io/anomalyco/opencode:latest
   openclaw_image: ghcr.io/openclaw/openclaw:latest
   openclaw_approvals_off: true
+  omp_image: harness-bench/omp:16.2.8
+  omp_approval_mode: yolo
+  omp_agent_max_seconds: 300
 
 benchmarks:
   - name: simpleqa

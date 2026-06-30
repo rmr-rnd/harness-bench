@@ -420,6 +420,16 @@ HTML = """<!DOCTYPE html>
           </div>
         </div>
       </div>
+      <div id="omp-opts" style="display:none;margin-top:12px">
+        <div class="form-grid">
+          <label>docker image</label>
+          <input type="text" id="omp_image" value="harness-bench/omp:16.2.8" autocomplete="off" style="font-family:monospace">
+          <label>approval mode</label>
+          <input type="text" id="omp_approval_mode" value="yolo" autocomplete="off" style="font-family:monospace">
+          <label>max seconds</label>
+          <input type="number" id="omp_agent_max_seconds" value="300" min="1">
+        </div>
+      </div>
 
       <div class="form-grid" style="margin-top:12px">
         <label>web search</label>
@@ -732,8 +742,11 @@ function applyConfig(cfg) {
     if (cfg.harness.openclaw_image) document.getElementById('openclaw_image').value = cfg.harness.openclaw_image;
     if (cfg.harness.openclaw_token) document.getElementById('openclaw_token').value = cfg.harness.openclaw_token;
     document.getElementById('openclaw_approvals_off').checked = cfg.harness.openclaw_approvals_off !== false;
+    if (cfg.harness.omp_image) document.getElementById('omp_image').value = cfg.harness.omp_image;
+    if (cfg.harness.omp_approval_mode) document.getElementById('omp_approval_mode').value = cfg.harness.omp_approval_mode;
+    if (cfg.harness.omp_agent_max_seconds) document.getElementById('omp_agent_max_seconds').value = cfg.harness.omp_agent_max_seconds;
     // PAC1 fields (shown when pac1 benchmark is selected, regardless of harness type)
-    if (htype === 'pac1_hermes' || htype === 'pac1_openclaw' || cfg.harness.bitgn_api_key) {
+    if (htype === 'pac1_hermes' || htype === 'pac1_openclaw' || htype === 'pac1_opencode' || htype === 'pac1_omp' || cfg.harness.bitgn_api_key) {
       if (cfg.harness.bitgn_api_key) document.getElementById('pac1_bitgn_api_key').value = cfg.harness.bitgn_api_key;
       if (cfg.harness.bitgn_benchmark_host) document.getElementById('pac1_bitgn_benchmark_host').value = cfg.harness.bitgn_benchmark_host;
       if (cfg.harness.bitgn_benchmark_id) document.getElementById('pac1_bitgn_benchmark_id').value = cfg.harness.bitgn_benchmark_id;
@@ -787,6 +800,9 @@ function readFields() {
       openclaw_image: gv('openclaw_image') || 'ghcr.io/openclaw/openclaw:latest',
       openclaw_token: gv('openclaw_token') || '',
       openclaw_approvals_off: document.getElementById('openclaw_approvals_off')?.checked ?? true,
+      omp_image: gv('omp_image') || 'harness-bench/omp:16.2.8',
+      omp_approval_mode: gv('omp_approval_mode') || 'yolo',
+      omp_agent_max_seconds: parseInt(gv('omp_agent_max_seconds')) || 300,
     },
     parallelism: {
       workers: parseInt(gv('workers')) || 1,
@@ -1067,6 +1083,7 @@ function onHarnessChange() {
   document.getElementById('hermes-opts').style.display   = type.includes('hermes')   ? '' : 'none';
   document.getElementById('opencode-opts').style.display = type.includes('opencode') ? '' : 'none';
   document.getElementById('openclaw-opts').style.display = type.includes('openclaw') ? '' : 'none';
+  document.getElementById('omp-opts').style.display      = type.includes('omp')      ? '' : 'none';
   document.getElementById('pac1-opts').style.display = document.getElementById('cb_pac1')?.checked ? '' : 'none';
 }
 
@@ -1869,16 +1886,14 @@ async def index():
 @app.get("/api/harnesses")
 async def get_harnesses():
     """Return list of available harness types (filenames in framework/harnesses/)."""
-    import importlib.util
+    import importlib
     harnesses_dir = Path(__file__).parent.parent / "harnesses"
     types = []
     for f in sorted(harnesses_dir.glob("*.py")):
         if f.stem.startswith("_"):
             continue
         try:
-            spec = importlib.util.spec_from_file_location(f.stem, f)
-            mod = importlib.util.module_from_spec(spec)
-            spec.loader.exec_module(mod)
+            mod = importlib.import_module(f"framework.harnesses.{f.stem}")
             import inspect
             from framework.harnesses.base import Harness
             for _, obj in inspect.getmembers(mod, inspect.isclass):

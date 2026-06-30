@@ -140,9 +140,9 @@ pip install -e ".[pac1]"
 
 ```yaml
 harness:
-  type: pac1_opencode          # или pac1_hermes, pac1_openclaw
+  type: pac1_opencode          # или pac1_hermes, pac1_openclaw, pac1_omp
   benchmark_harness:
-    pac1: pac1_opencode
+    pac1: pac1_opencode        # для OMP: pac1_omp
   bitgn_api_key: ${BITGN_API_KEY}
   bitgn_benchmark_host: https://api.bitgn.com
   bitgn_benchmark_id: bitgn/pac1-dev

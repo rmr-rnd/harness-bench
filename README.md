@@ -8,7 +8,7 @@
 
 Поддерживает встроенные бенчмарки и **пользовательские** — достаточно написать один Python-класс и запустить на нём любого агента.
 
-Поддерживаемые harness: hermes, openclaw, opencode
+Поддерживаемые harness: hermes, openclaw, opencode, omp
 
 ## Требования
 
@@ -52,9 +52,11 @@ docker compose -f docker/docker-compose.yml --env-file docker/.env up --build -d
 | `hermes` | Hermes Agent в Docker | Да |
 | `opencode` | OpenCode в Docker | Да |
 | `openclaw` | OpenClaw в Docker | Да |
+| `omp` | Oh My Pi в Docker через RPC | Да |
 | `pac1_hermes` | Hermes + PAC1 | — |
 | `pac1_opencode` | OpenCode + PAC1 | — |
 | `pac1_openclaw` | OpenClaw + PAC1 | — |
+| `pac1_omp` | Oh My Pi + PAC1 | — |
 
 ## Бенчмарки
 
