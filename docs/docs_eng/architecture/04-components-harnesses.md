@@ -10,7 +10,7 @@ Two harness↔orchestrator protocols coexist in the system:
 
 | | Modern (`send_turn`) | Legacy (`run_task`) |
 |--|----------------------|---------------------|
-| **Who uses it** | Hermes, OpenClaw, OpenCode | PAC1 only |
+| **Who uses it** | Hermes, OpenClaw, OpenCode, OMP | PAC1 only |
 | **Flag** | `SUPPORTS_RUNNER_PROTOCOL = True` | `SUPPORTS_RUNNER_PROTOCOL = False` |
 | **Engine** | Runner drives the turns | Harness drives the conversation itself |
 | **Container** | Lazy start on the first `send_turn()` | Started inside `run_task()` |
@@ -72,6 +72,15 @@ With an MCP Bridge present — built-in tools are blocked via `permission: {"*":
 
 ---
 
+### OmpHarness
+`supports_sandbox = True`
+
+Runs Oh My Pi (`omp`) in Docker in RPC mode (`--mode rpc`) and communicates through JSONL stdio. The harness generates a temporary OMP profile from `model.*`, mounts it with the working directory, and removes it after the task.
+
+When an MCP Bridge is present, the harness writes an OMP-native `mcp.json` with `sandbox-bridge` (`type: "http"`) so sandbox benchmarks use the shared MCP bridge.
+
+---
+
 ### Pac1Harness (ABC)
 `SUPPORTS_RUNNER_PROTOCOL = False`
 
@@ -97,6 +106,7 @@ Abstract base for PAC1. Uses the **legacy `run_task()` protocol** — it manages
 | `Pac1HermesHarness` | Hermes | `hermes_runner.run_hermes()` — `subprocess.Popen`, `--yolo --toolsets terminal`, hooks |
 | `Pac1OpenClawHarness` | OpenClaw | `openclaw_runner.run_openclaw()` — Pi tools on `/workspace` |
 | `Pac1OpenCodeHarness` | OpenCode | `opencode_runner.run_opencode()` — `opencode serve`, SSE events |
+| `Pac1OmpHarness` | OMP | `omp_runner.run_omp()` — `omp --mode rpc`, `.pac1_answer.json` |
 
 ---
 

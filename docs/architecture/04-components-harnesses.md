@@ -10,7 +10,7 @@
 
 | | Современный (`send_turn`) | Legacy (`run_task`) |
 |--|--------------------------|---------------------|
-| **Кто использует** | Hermes, OpenClaw, OpenCode | PAC1 только |
+| **Кто использует** | Hermes, OpenClaw, OpenCode, OMP | PAC1 только |
 | **Флаг** | `SUPPORTS_RUNNER_PROTOCOL = True` | `SUPPORTS_RUNNER_PROTOCOL = False` |
 | **Движок** | Runner управляет ходами | Харнес сам управляет диалогом |
 | **Контейнер** | Lazy-старт при первом `send_turn()` | Стартует внутри `run_task()` |
@@ -72,6 +72,15 @@
 
 ---
 
+### OmpHarness
+`supports_sandbox = True`
+
+Запускает Oh My Pi (`omp`) в Docker в RPC-режиме (`--mode rpc`) и общается с ним через JSONL stdio. Harness генерирует временный OMP-профиль с моделью из `model.*`, монтирует его вместе с рабочей директорией и удаляет после задачи.
+
+При наличии MCP Bridge создаётся OMP-native `mcp.json` с `sandbox-bridge` (`type: "http"`), чтобы sandbox-бенчмарки шли через общий MCP-мост.
+
+---
+
 ### Pac1Harness (ABC)
 `SUPPORTS_RUNNER_PROTOCOL = False`
 
@@ -97,6 +106,7 @@
 | `Pac1HermesHarness` | Hermes | `hermes_runner.run_hermes()` — `subprocess.Popen`, `--yolo --toolsets terminal`, hooks |
 | `Pac1OpenClawHarness` | OpenClaw | `openclaw_runner.run_openclaw()` — Pi-инструменты на `/workspace` |
 | `Pac1OpenCodeHarness` | OpenCode | `opencode_runner.run_opencode()` — `opencode serve`, SSE-события |
+| `Pac1OmpHarness` | OMP | `omp_runner.run_omp()` — `omp --mode rpc`, `.pac1_answer.json` |
 
 ---
 

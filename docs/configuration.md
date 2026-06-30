@@ -88,6 +88,11 @@ harness:
   openclaw_token: ''
   openclaw_approvals_off: true
 
+  # omp / Oh My Pi
+  omp_image: harness-bench/omp:16.2.8    # локальный Docker-образ
+  omp_approval_mode: yolo
+  omp_agent_max_seconds: 300
+
   # PAC1
   bitgn_api_key: ${BITGN_API_KEY}
   bitgn_benchmark_host: https://api.bitgn.com
@@ -105,6 +110,19 @@ harness:
   benchmark_harness:
     pac1: pac1_opencode                 # для pac1 — использовать pac1_opencode
     bfcl: opencode                      # для bfcl — использовать opencode
+```
+
+Для OMP PAC1-вариант называется `pac1_omp`, поэтому при `harness.type: omp`
+Web UI и оркестратор могут автоматически выставить `benchmark_harness: {pac1: pac1_omp}`.
+
+## Smoke-тест harness
+
+Реальная проверка harness выполняется тем же путём, что обычный прогон. Для OMP
+сначала собери локальный образ, затем запусти свой конфиг с небольшим лимитом задач:
+
+```bash
+docker build -t harness-bench/omp:16.2.8 -f docker/omp/Dockerfile docker/omp
+framework run configs/my_run.yaml
 ```
 
 ## База данных

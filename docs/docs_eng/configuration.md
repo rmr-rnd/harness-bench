@@ -88,6 +88,11 @@ harness:
   openclaw_token: ''
   openclaw_approvals_off: true
 
+  # omp / Oh My Pi
+  omp_image: harness-bench/omp:16.2.8    # local Docker image
+  omp_approval_mode: yolo
+  omp_agent_max_seconds: 300
+
   # PAC1
   bitgn_api_key: ${BITGN_API_KEY}
   bitgn_benchmark_host: https://api.bitgn.com
@@ -105,6 +110,19 @@ harness:
   benchmark_harness:
     pac1: pac1_opencode                 # for pac1 — use pac1_opencode
     bfcl: opencode                      # for bfcl — use opencode
+```
+
+For OMP, the PAC1 variant is `pac1_omp`, so when `harness.type: omp` is
+selected the Web UI and orchestrator can auto-fill `benchmark_harness: {pac1: pac1_omp}`.
+
+## Harness Smoke Test
+
+Real harness verification uses the same path as a normal run. For OMP, build the
+local image first, then run your config with a small task limit:
+
+```bash
+docker build -t harness-bench/omp:16.2.8 -f docker/omp/Dockerfile docker/omp
+framework run configs/my_run.yaml
 ```
 
 ## Database

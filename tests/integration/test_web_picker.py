@@ -45,3 +45,10 @@ async def test_load_config_rejects_bad_names(name, status):
     web._deployment_db = None
     resp = await web.load_config({"name": name})
     assert resp.status_code == status
+
+
+@pytest.mark.asyncio
+async def test_harness_discovery_includes_omp_variants():
+    resp = await web.get_harnesses()
+    names = set(json.loads(resp.body.decode()))
+    assert {"omp", "pac1_omp"}.issubset(names)

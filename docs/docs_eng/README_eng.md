@@ -4,7 +4,7 @@ Framework for benchmarking AI harnesses. Runs agents over task sets, scores answ
 
 Supports built-in benchmarks and **custom** ones — write a single Python class and run any agent on it.
 
-Supported harnesses: hermes, openclaw, opencode
+Supported harnesses: hermes, openclaw, opencode, omp
 
 > [!IMPORTANT]
 > On the first benchmark run, the agent-harness image (`nousresearch/hermes-agent` and the like) is pulled automatically. Some benchmarks (e.g. **SWE-bench** and **theagentcompany**) likewise pull images on first run. Please wait for the download to finish.
@@ -60,9 +60,11 @@ The DB for the service is set by the **deployment environment** (docker-compose 
 | `hermes` | Hermes Agent in Docker | Yes |
 | `opencode` | OpenCode in Docker | Yes |
 | `openclaw` | OpenClaw in Docker | Yes |
+| `omp` | Oh My Pi in Docker through RPC | Yes |
 | `pac1_hermes` | Hermes + PAC1 | — |
 | `pac1_opencode` | OpenCode + PAC1 | — |
 | `pac1_openclaw` | OpenClaw + PAC1 | — |
+| `pac1_omp` | Oh My Pi + PAC1 | — |
 
 ## Benchmarks
 
