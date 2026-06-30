@@ -1,5 +1,7 @@
 # Harness Bench
 
+![Harness Bench](assets/harness-bench.png)
+
 > **English version:** [docs/docs_eng/README_eng.md](docs/docs_eng/README_eng.md) · English docs: [docs/docs_eng/](docs/docs_eng/)
 
 Фреймворк для бенчмаркинга AI-harness. Запускает агентов на наборах задач, оценивает качество ответов и отображает результаты в Web UI с историей запусков.
